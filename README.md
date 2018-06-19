@@ -1,6 +1,6 @@
 # Duct database.mongodb.monger
 
-[![Build Status](https://travis-ci.org/agrison/duct-database.mongodb.monger.svg?branch=master)](https://travis-ci.org/travis-ci.org/agrison/duct-database.mongodb.monger)
+[![Build Status](https://travis-ci.org/agrison/duct-mongodb.svg?branch=master)](https://travis-ci.org/travis-ci.org/agrison/duct-mongodb)
 
 [Integrant][] methods for connecting to a [MongoDB][] database via
 [Monger][].
