@@ -7,4 +7,6 @@
   :dependencies [[org.clojure/clojure "1.9.0"]
                  [integrant "0.6.3"]
                  [com.novemberain/monger "3.1.0"]]
-  :plugins [[lein-embongo "0.2.3"]])
+  :plugins [[lein-embongo "0.2.3"]]
+  :deploy-repositories [["releases"  {:sign-releases false :url "https://clojars.org/repo"}]
+                        ["snapshots" {:sign-releases false :url "https://clojars.org/repo"}]])
