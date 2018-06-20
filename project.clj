@@ -3,6 +3,7 @@
   :url "https://github.com/agrison/duct-mongodb"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
+  :lein-release {:scm :git :deploy-via :clojars}
   :dependencies [[org.clojure/clojure "1.9.0"]
                  [integrant "0.6.3"]
                  [com.novemberain/monger "3.1.0"]]
