@@ -1,4 +1,4 @@
-(defproject me.grison/duct-mongodb "0.1.0-SNAPSHOT"
+(defproject me.grison/duct-mongodb "0.1.0"
   :description "Integrant methods for connecting to MongoDB via Monger"
   :url "https://github.com/agrison/duct-mongodb"
   :license {:name "Eclipse Public License"
