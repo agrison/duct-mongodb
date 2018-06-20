@@ -18,8 +18,8 @@ To install, add the following to your project `:dependencies`
 ## Usage
 
 This library provides two things: 
-* a `Boundary` record that holds
-both the Monger connection (`:conn`) and the selected database (`:db`).
+* a `Boundary` record that holds both the Monger connection (`:conn`)
+and the selected database (`:db`).
 * a multimethod for `:duct.database.mongodb/monger` 
 that initiates the connection based
 on those options into the
@@ -42,6 +42,10 @@ easily mock or stub out the database using a tool like [Shrubbery][].
   {:uri "mongodb://127.0.0.1:27017/hello?username=foo&password=bar"}
 ```
 
+Additional parameters can be used in the [URI format][].
+
+[uri format]: https://docs.mongodb.com/manual/reference/connection-string/
+
 ### Host & port
 
 ```edn
@@ -58,8 +62,9 @@ easily mock or stub out the database using a tool like [Shrubbery][].
              :threads-allowed-to-block-for-connection-multiplier 300}}}
 ```
 
-See [MongoOptions](http://api.mongodb.com/java/current/com/mongodb/MongoOptions.html) 
-for more information.
+See [MongoOptions][] for more information.
+
+[mongooptions]: http://api.mongodb.com/java/current/com/mongodb/MongoOptions.html
 
 ## Example
 
