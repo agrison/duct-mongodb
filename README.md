@@ -13,7 +13,7 @@
 
 To install, add the following to your project `:dependencies`
 
-    [me.grison/duct-mongodb "0.1.0"]
+    [me.grison/duct-mongodb "0.1.1"]
 
 ## Usage
 

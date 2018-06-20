@@ -29,7 +29,8 @@
     (mg/connect-via-uri uri)
     {:conn (if-not (nil? options)
              (connect-with-options options host port)
-             (mg/connect {:host host :port port}))
+             (if-not (nil? host)
+               (mg/connect {:host host :port port})))
      :db   nil}))
 
 ; Init the connection to MongoDB and return a Boundary whose keys are:
@@ -44,5 +45,6 @@
     (->Boundary conn database)))
 
 ; Disconnects from MongoDB
-(defmethod ig/halt-key! :duct.database.mongodb/monger [_ instance]
-  (mg/disconnect (:conn instance)))
+(defmethod ig/halt-key! :duct.database.mongodb/monger [_ {:keys [conn]}]
+  (if-not (nil? conn)
+    (mg/disconnect conn)))
