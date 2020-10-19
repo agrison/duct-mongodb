@@ -40,3 +40,16 @@
     (test-connection mongo)
     (is (= 123 (.socketTimeout (.getMongoOptions (:conn mongo)))))
     (test-disconnection mongo)))
+
+(deftest init-key-credentials-test
+  (let [mongo (ig/init-key :duct.database.mongodb/monger
+                           {:host "127.0.0.1"
+                            :port 27017
+                            :db-name "test"
+                            :username "mongo"
+                            :password "mongo"})]
+    (test-connection mongo)
+    (let [credential (-> mongo :conn .getCredentialsList first)]
+      (is (= "mongo" (.getUserName credential)))
+      (is (= "mongo" (apply str (.getPassword credential)))))
+    (test-disconnection mongo)))
